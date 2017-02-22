@@ -1,2 +1,3 @@
-# Journal-App-With-Python
+# CaptsLog
 Journal application using python
+
