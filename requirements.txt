@@ -1,0 +1,7 @@
+pytest
+pytest-cov
+markdown
+pymongo
+sphinx
+python-coveralls
+coverage

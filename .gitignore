@@ -1,0 +1,8 @@
+
+.cache/v/cache/lastfailed
+
+.coverage
+
+venv/*
+
+*.pyc
