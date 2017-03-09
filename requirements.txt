@@ -1,6 +1,6 @@
 pytest
 pytest-cov
-pep8
+pytest-pep8
 markdown
 pymongo
 sphinx
