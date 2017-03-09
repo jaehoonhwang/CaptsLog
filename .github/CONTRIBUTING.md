@@ -2,6 +2,39 @@
 
 We are test-driven, though we gonna do some switching between test first and test second method.
 
+## How to Git
+
+Follow this guideline:
+
+```
+git clone git@github.com:your-user-name/captslog.git captslog-yourname
+cd capts-yourname
+git remote add upstream git://github.com/jaehoonhwang/captslog.git
+```
+
+Create a branch to submit your PR and **make your branch name something relevant**:
+
+```
+git branch descriptive-branch-name
+git checkout descriptive-branch-name
+```
+
+To update the branch use following line:
+
+```
+git fetch upstream
+git rebase upstream/master
+```
+
+**NOTE**: Be descriptive in your commit name.
+I don't care about summary, but, in your commit title, it should be summary of what you did.
+
+**Example**:
+```
+git commit -m "ThingsthatIdid" (NO)
+git commit -m "Fixed UI Error and created helper function" (YES)
+```
+
 ## Source Code
 
 Every source code should be `source/` (It will be change to `captslog/` later)
