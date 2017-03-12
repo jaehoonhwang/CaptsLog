@@ -3,6 +3,7 @@ pytest-cov
 markdown
 pymongo
 sphinx
+sphinxcontrib-napoleon
 coverage
 flake8
 codecov
