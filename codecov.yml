@@ -1,5 +1,5 @@
 ignore:
-    - "example_google.py"
+    - "captslog/example_google.py"
 
 codecov:
   notify:
