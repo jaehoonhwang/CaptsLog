@@ -1,6 +1,3 @@
-ignore:
-    - "captslog/example_google.py"
-
 codecov:
   notify:
     require_ci_to_pass: yes
@@ -10,6 +7,9 @@ coverage:
   precision: 2         # how many decimal places to display in the UI: 0 <= value <= 4
   round: down          # how coverage is rounded: down/up/nearest
   range: 50...100
+  ignore:
+      - "captslog/example_google.py"
+
 status:
   project:                   # measuring the overall project coverage
     default:                 # context, you can create multiple ones with custom titles
@@ -44,6 +44,7 @@ status:
       if_no_uploads: error
       if_not_found: success
       if_ci_failed: error
+
 comment:
   layout: "header, diff"
   behavior: default  # update if exists else create new
