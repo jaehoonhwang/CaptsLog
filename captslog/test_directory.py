@@ -33,22 +33,19 @@ Todo:
 
 """
 
+from example_google import *
+
 import pytest
 
 
 def square(x):
     """Example function with types documented in the docstring.
 
-    `PEP 484`_ type annotations are supported. If attribute, parameter, and
-    return types are annotated according to `PEP 484`_, they do not need to be
-    included in the docstring:
-
     Args:
-        param1 (int): The first parameter.
-        param2 (str): The second parameter.
+        x (int): The first parameter.
 
     Returns:
-        bool: The return value. True for success, False otherwise.
+        int: Square value of x
 
     .. _PEP 484:
         https://www.python.org/dev/peps/pep-0484/
@@ -58,16 +55,9 @@ def square(x):
 
 
 def test_square():
-    """Summary line.
+    """Test Square.
 
-    Extended description of function.
-
-    Args:
-        arg1 (int): Description of arg1
-        arg2 (str): Description of arg2
-
-    Returns:
-        bool: Description of return value
+    For test functionality of pytest
 
     """
     x = [1, 2, 3, 4, 5]

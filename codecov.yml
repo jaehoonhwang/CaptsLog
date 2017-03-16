@@ -1,3 +1,6 @@
+ignore:
+    - "example_google.py"
+
 codecov:
   notify:
     require_ci_to_pass: yes
@@ -44,6 +47,3 @@ status:
 comment:
   layout: "header, diff"
   behavior: default  # update if exists else create new
-
-ignore:
-    - "example_google.py"
