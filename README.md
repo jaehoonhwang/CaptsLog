@@ -10,3 +10,7 @@ Journal Application using python
 - Pyside
 - Pymongo
 - Markdown
+
+## Project Documentation
+
+[Github Page](http://jaehoonhwang.me/CaptsLog/html/)
