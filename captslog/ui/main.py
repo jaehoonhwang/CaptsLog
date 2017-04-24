@@ -19,26 +19,26 @@ except AttributeError:
         return QtGui.QApplication.translate(context, text, disambig)
 
 
-# Main Control Class		
+# Main Control Class
 class Main(QtGui.QMainWindow):
-	
-	def __init__(self, parent=None):
-		super(Main, self).__init__(parent)
-		self.ui = Ui_MainWindow()
-		self.ui.setupUi(self)
-		self.ui.center_widget.entry.journalEntry.textChanged.connect(self.text_triggered)
-	
-	def text_triggered(self):
-		raw = self.ui.center_widget.entry.journalEntry.toPlainText()
-		md = markdown.Markdown()
-		raw = str(raw)
-		ntxt = md.convert(raw)
-		self.ui.center_widget.view.journalView.setHtml(ntxt)
-		
+
+    def __init__(self, parent=None):
+        super(Main, self).__init__(parent)
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self)
+        self.ui.center_widget.entry.journalEntry.textChanged.connect(self.text_triggered)
+
+    def text_triggered(self):
+        raw = self.ui.center_widget.entry.journalEntry.toPlainText()
+        md = markdown.Markdown()
+        raw = str(raw)
+        ntxt = md.convert(raw)
+        self.ui.center_widget.view.journalView.setHtml(ntxt)
+
 
 if __name__ == "__main__":
-	import sys
-	app = QtGui.QApplication(sys.argv)
-	Form = Main()
-	Form.show()
-	sys.exit(app.exec_())
+    import sys
+    app = QtGui.QApplication(sys.argv)
+    Form = Main()
+    Form.show()
+    sys.exit(app.exec_())

@@ -83,6 +83,7 @@ coverage:
 
 
   ignore:          # files and folders that will be removed during processing
+    - "captslog/ui"
 
   fixes:           # [advanced] in rare cases the report tree is invalid, specify adjustments here
     - "old_path::new_path"
