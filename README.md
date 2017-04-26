@@ -19,7 +19,7 @@ Journal Application using python
 
 CaptsLog uses `sphinx` for its documentation need with extension of **napoleon**(google docstring convention).
 
-Github offers github pages. Github pages for CaptsLog can be access through this [url]((http://jaehoonhwang.me/CaptsLog/html/) or to view source code go to `gh-pages` branch of this documentation.
+Github offers github pages. Github pages for CaptsLog can be access through this [url](http://jaehoonhwang.me/CaptsLog/html/) or to view source code go to `gh-pages` branch of this documentation.
 
 After following [google docstring convention](http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html).
 
