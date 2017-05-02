@@ -1,0 +1,7 @@
+centralwidget module
+====================
+
+.. automodule:: centralwidget
+    :members:
+    :undoc-members:
+    :show-inheritance:

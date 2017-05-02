@@ -1,0 +1,54 @@
+ui package
+==========
+
+Submodules
+----------
+
+ui.centralwidget module
+-----------------------
+
+.. automodule:: ui.centralwidget
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.entrywidget module
+---------------------
+
+.. automodule:: ui.entrywidget
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.main module
+--------------
+
+.. automodule:: ui.main
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.mainwindow module
+--------------------
+
+.. automodule:: ui.mainwindow
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.viewwidget module
+--------------------
+
+.. automodule:: ui.viewwidget
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: ui
+    :members:
+    :undoc-members:
+    :show-inheritance:

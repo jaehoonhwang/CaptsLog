@@ -1,0 +1,7 @@
+entrywidget module
+==================
+
+.. automodule:: entrywidget
+    :members:
+    :undoc-members:
+    :show-inheritance:

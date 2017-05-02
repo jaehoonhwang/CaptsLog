@@ -1,0 +1,7 @@
+example_google_docstring module
+===============================
+
+.. automodule:: example_google_docstring
+    :members:
+    :undoc-members:
+    :show-inheritance:

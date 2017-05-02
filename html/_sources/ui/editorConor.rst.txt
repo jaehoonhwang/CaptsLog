@@ -1,0 +1,7 @@
+editorConor module
+==================
+
+.. automodule:: editorConor
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,7 @@
+viewwidget module
+=================
+
+.. automodule:: viewwidget
+    :members:
+    :undoc-members:
+    :show-inheritance:

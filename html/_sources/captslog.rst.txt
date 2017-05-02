@@ -7,6 +7,8 @@ Subpackages
 .. toctree::
 
     captslog.db
+    captslog.tests
+    captslog.ui
 
 Module contents
 ---------------

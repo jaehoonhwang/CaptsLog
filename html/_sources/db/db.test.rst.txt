@@ -1,0 +1,22 @@
+db.test package
+===============
+
+Submodules
+----------
+
+db.test.test_DBhandler module
+-----------------------------
+
+.. automodule:: db.test.test_DBhandler
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: db.test
+    :members:
+    :undoc-members:
+    :show-inheritance:
