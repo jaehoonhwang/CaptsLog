@@ -90,7 +90,7 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">captslog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../captslog.html">captslog package</a></li>
 </ul>
 
             
@@ -172,27 +172,49 @@
     <span class="k">def</span> <span class="nf">_translate</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">disambig</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">disambig</span><span class="p">)</span>
 
-<span class="c1"># Journal Entry Class which contains the layout and widget</span>
-
 
 <div class="viewcode-block" id="Entry_Widget"><a class="viewcode-back" href="../../../captslog.ui.html#captslog.ui.entrywidget.Entry_Widget">[docs]</a><span class="k">class</span> <span class="nc">Entry_Widget</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QWidget</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Set up Journal Entry.</span>
+
+<span class="sd">    This widget allows users to type in their journal</span>
+<span class="sd">    to be converted to markdown format.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize Journal Entry.</span>
+
+<span class="sd">        Set up the caller function as reference when</span>
+<span class="sd">        this class is initiated. Then calls</span>
+<span class="sd">        the entry_layout function.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Entry_Widget</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">entry_layout</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
 
-    <span class="c1"># Entry Layout</span>
 <div class="viewcode-block" id="Entry_Widget.entry_layout"><a class="viewcode-back" href="../../../captslog.ui.html#captslog.ui.entrywidget.Entry_Widget.entry_layout">[docs]</a>    <span class="k">def</span> <span class="nf">entry_layout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add box layout for Journal Entry.</span>
+
+<span class="sd">        This function adds a box layout in the middle of the central widget</span>
+<span class="sd">        and calls __JournalEntry funtion.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">journalEntryLayout</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QHBoxLayout</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">journalEntryLayout</span><span class="o">.</span><span class="n">setMargin</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+        <span class="c1"># self.journalEntryLayout.setMargin(11)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">journalEntryLayout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">journalEntryLayout</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="n">_fromUtf8</span><span class="p">(</span><span class="s2">&quot;journalEntryLayout&quot;</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__JournalEntry</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">journalEntryLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">journalEntry</span><span class="p">)</span>
         <span class="n">parent</span><span class="o">.</span><span class="n">horizontalLayout_7</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">journalEntryLayout</span><span class="p">)</span></div>
 
-    <span class="c1"># Entry Widget</span>
     <span class="k">def</span> <span class="nf">__JournalEntry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set up QPlainTextEdit.</span>
+
+<span class="sd">        This function create a Plain Text Editor as the input for the user.</span>
+
+<span class="sd">        The size of this widget scales along with the window size.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">journalEntry</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QPlainTextEdit</span><span class="p">(</span><span class="n">parent</span><span class="o">.</span><span class="n">centralWidget</span><span class="p">)</span>
         <span class="n">sizePolicy</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QSizePolicy</span><span class="p">(</span>
             <span class="n">QtGui</span><span class="o">.</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">,</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">)</span>

@@ -90,7 +90,7 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">captslog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../captslog.html">captslog package</a></li>
 </ul>
 
             
@@ -155,15 +155,8 @@
            <div itemprop="articleBody">
             
   <h1>Source code for captslog.ui.mainwindow</h1><div class="highlight"><pre>
-<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
-
-<span class="c1"># Form implementation generated from reading ui file &#39;.\mainwindow.ui&#39;</span>
-<span class="c1">#</span>
-<span class="c1"># Created by: PyQt4 UI code generator 4.11.4</span>
-<span class="c1">#</span>
-<span class="c1"># WARNING! All changes made in this file will be lost!</span>
-
-<span class="kn">from</span> <span class="nn">PyQt4</span> <span class="k">import</span> <span class="n">QtCore</span><span class="p">,</span> <span class="n">QtGui</span>
+<span></span><span class="kn">from</span> <span class="nn">PyQt4</span> <span class="k">import</span> <span class="n">QtCore</span><span class="p">,</span> <span class="n">QtGui</span>
+<span class="c1"># from PySide import QtCore, QtGui</span>
 <span class="kn">from</span> <span class="nn">centralwidget</span> <span class="k">import</span> <span class="n">CentralWidget</span>
 
 <span class="k">try</span><span class="p">:</span>
@@ -182,34 +175,44 @@
         <span class="k">return</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">disambig</span><span class="p">)</span>
 
 
-<span class="c1"># Main Window GUI</span>
 <div class="viewcode-block" id="Ui_MainWindow"><a class="viewcode-back" href="../../../captslog.ui.html#captslog.ui.mainwindow.Ui_MainWindow">[docs]</a><span class="k">class</span> <span class="nc">Ui_MainWindow</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QMainWindow</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;MainWindow class</span>
 
+<span class="sd">    This is the main class for GUI, it calls initiation from the CentralWidget</span>
+<span class="sd">    class, which generates the main content of GUI.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
 <div class="viewcode-block" id="Ui_MainWindow.setupUi"><a class="viewcode-back" href="../../../captslog.ui.html#captslog.ui.mainwindow.Ui_MainWindow.setupUi">[docs]</a>    <span class="k">def</span> <span class="nf">setupUi</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">MainWindow</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Setting up Main window UI.</span>
+        <span class="sd">&quot;&quot;&quot;Set up the Main Window.</span>
+
+<span class="sd">        This function does three main things: set an initial size</span>
+<span class="sd">        for the window, set up the central widget, and the menu bar.</span>
+
+<span class="sd">        Attributes:</span>
+<span class="sd">            sizePolicy (QSizePolicy) : Window size setting.</span>
+<span class="sd">            _layout (QHBoxLayout) : layout for central widget to</span>
+<span class="sd">                                    scale along with window.</span>
+
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="n">_fromUtf8</span><span class="p">(</span><span class="s2">&quot;MainWindow&quot;</span><span class="p">))</span>
+        <span class="c1"># Set Window Size.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">550</span><span class="p">,</span> <span class="mi">600</span><span class="p">)</span>
-
-        <span class="c1"># Size Policy</span>
         <span class="n">sizePolicy</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QSizePolicy</span><span class="p">(</span>
             <span class="n">QtGui</span><span class="o">.</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">,</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">)</span>
         <span class="n">sizePolicy</span><span class="o">.</span><span class="n">setHorizontalStretch</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
         <span class="n">sizePolicy</span><span class="o">.</span><span class="n">setVerticalStretch</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
         <span class="n">sizePolicy</span><span class="o">.</span><span class="n">setHeightForWidth</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">sizePolicy</span><span class="p">()</span><span class="o">.</span><span class="n">hasHeightForWidth</span><span class="p">())</span>
-
-        <span class="c1"># Main Window</span>
         <span class="n">MainWindow</span><span class="o">.</span><span class="n">setSizePolicy</span><span class="p">(</span><span class="n">sizePolicy</span><span class="p">)</span>
         <span class="n">MainWindow</span><span class="o">.</span><span class="n">setMaximumSize</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QSize</span><span class="p">(</span><span class="mi">16777215</span><span class="p">,</span> <span class="mi">16777215</span><span class="p">))</span>
         <span class="n">MainWindow</span><span class="o">.</span><span class="n">setDocumentMode</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="c1"># Set up Central Widget, all layouts and widgets.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">center_widget</span> <span class="o">=</span> <span class="n">CentralWidget</span><span class="p">(</span><span class="n">MainWindow</span><span class="p">)</span>
+        <span class="n">_layout</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
         <span class="n">_widget</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QWidget</span><span class="p">()</span>
-        <span class="n">_layout</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">(</span><span class="n">_widget</span><span class="p">)</span>
         <span class="n">_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">center_widget</span><span class="p">)</span>
         <span class="n">MainWindow</span><span class="o">.</span><span class="n">setCentralWidget</span><span class="p">(</span><span class="n">_widget</span><span class="p">)</span>
-
-        <span class="c1"># Menu Bar</span>
+        <span class="c1"># Set up a menubar.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">menuBar</span> <span class="o">=</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QMenuBar</span><span class="p">(</span><span class="n">MainWindow</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">menuBar</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QRect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">550</span><span class="p">,</span> <span class="mi">22</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">menuBar</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="n">_fromUtf8</span><span class="p">(</span><span class="s2">&quot;menuBar&quot;</span><span class="p">))</span>
@@ -231,6 +234,12 @@
         <span class="n">QtCore</span><span class="o">.</span><span class="n">QMetaObject</span><span class="o">.</span><span class="n">connectSlotsByName</span><span class="p">(</span><span class="n">MainWindow</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="Ui_MainWindow.retranslateUi"><a class="viewcode-back" href="../../../captslog.ui.html#captslog.ui.mainwindow.Ui_MainWindow.retranslateUi">[docs]</a>    <span class="k">def</span> <span class="nf">retranslateUi</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">MainWindow</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Language translation.</span>
+
+<span class="sd">        This function exist in case of multi languages are introduce</span>
+<span class="sd">        to the program.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">MainWindow</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="n">_translate</span><span class="p">(</span><span class="s2">&quot;Captslog&quot;</span><span class="p">,</span> <span class="s2">&quot;Captslog&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">menuFile</span><span class="o">.</span><span class="n">setTitle</span><span class="p">(</span><span class="n">_translate</span><span class="p">(</span><span class="s2">&quot;MainWindow&quot;</span><span class="p">,</span> <span class="s2">&quot;File&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">actionNew_Entry</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span>

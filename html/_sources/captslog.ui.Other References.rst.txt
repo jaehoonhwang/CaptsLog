@@ -1,0 +1,54 @@
+captslog.ui.Other References package
+====================================
+
+Submodules
+----------
+
+captslog.ui.Other References.editor module
+------------------------------------------
+
+.. automodule:: captslog.ui.Other References.editor
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+captslog.ui.Other References.editorConor module
+-----------------------------------------------
+
+.. automodule:: captslog.ui.Other References.editorConor
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+captslog.ui.Other References.log_in module
+------------------------------------------
+
+.. automodule:: captslog.ui.Other References.log_in
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+captslog.ui.Other References.main_window module
+-----------------------------------------------
+
+.. automodule:: captslog.ui.Other References.main_window
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+captslog.ui.Other References.sign_up module
+-------------------------------------------
+
+.. automodule:: captslog.ui.Other References.sign_up
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: captslog.ui.Other References
+    :members:
+    :undoc-members:
+    :show-inheritance:

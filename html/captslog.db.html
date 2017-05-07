@@ -195,17 +195,7 @@
 <dl class="class">
 <dt id="captslog.db.DBHandler.DBHandlerClass">
 <em class="property">class </em><code class="descclassname">captslog.db.DBHandler.</code><code class="descname">DBHandlerClass</code><a class="reference internal" href="_modules/captslog/db/DBHandler.html#DBHandlerClass"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#captslog.db.DBHandler.DBHandlerClass" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="attribute">
-<dt id="captslog.db.DBHandler.DBHandlerClass.client">
-<code class="descname">client</code><em class="property"> = MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True)</em><a class="headerlink" href="#captslog.db.DBHandler.DBHandlerClass.client" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="captslog.db.DBHandler.DBHandlerClass.db">
-<code class="descname">db</code><em class="property"> = Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), u'Captains_Log_DB')</em><a class="headerlink" href="#captslog.db.DBHandler.DBHandlerClass.db" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
+<dd><dl class="method">
 <dt id="captslog.db.DBHandler.DBHandlerClass.delete_entries">
 <code class="descname">delete_entries</code><span class="sig-paren">(</span><em>_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/captslog/db/DBHandler.html#DBHandlerClass.delete_entries"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#captslog.db.DBHandler.DBHandlerClass.delete_entries" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete entries in the Entries_Table</p>
@@ -218,6 +208,21 @@
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">true if the delete was successful. false if it fails</td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">result(bool)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="captslog.db.DBHandler.DBHandlerClass.get_all">
+<code class="descname">get_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/captslog/db/DBHandler.html#DBHandlerClass.get_all"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#captslog.db.DBHandler.DBHandlerClass.get_all" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">all elements in the Entries Table</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">result(collection)</td>
 </tr>
 </tbody>
 </table>
@@ -279,6 +284,24 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>date</strong> (<em>datetime</em>) &#8211; the date you are searching for</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the search result</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">result(collection)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="captslog.db.DBHandler.DBHandlerClass.search_entries_by_id">
+<code class="descname">search_entries_by_id</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/captslog/db/DBHandler.html#DBHandlerClass.search_entries_by_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#captslog.db.DBHandler.DBHandlerClass.search_entries_by_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search For Entries created on the specified Date in the Entries_Table</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id</strong> (<em>string</em>) &#8211; the objectID you are searching for</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the search result</td>
 </tr>

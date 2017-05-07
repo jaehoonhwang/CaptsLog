@@ -91,17 +91,23 @@
             
             
               <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">captslog</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="captslog.html">captslog package</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="captslog.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="captslog.db.html">captslog.db package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="captslog.tests.html">captslog.tests package</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">captslog.ui package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="captslog.html">captslog package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="captslog.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="captslog.db.html">captslog.db package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="captslog.tests.html">captslog.tests package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">captslog.ui package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-captslog.ui.centralwidget">captslog.ui.centralwidget module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-captslog.ui.entrywidget">captslog.ui.entrywidget module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#captslog-ui-main-module">captslog.ui.main module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-captslog.ui.mainwindow">captslog.ui.mainwindow module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-captslog.ui.viewwidget">captslog.ui.viewwidget module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-captslog.ui">Module contents</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="captslog.html#module-captslog">Module contents</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="captslog.html#module-captslog">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -148,8 +154,6 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="modules.html">captslog</a> &raquo;</li>
-        
           <li><a href="captslog.html">captslog package</a> &raquo;</li>
         
       <li>captslog.ui package</li>
@@ -182,6 +186,9 @@
 <dt id="captslog.ui.centralwidget.CentralWidget">
 <em class="property">class </em><code class="descclassname">captslog.ui.centralwidget.</code><code class="descname">CentralWidget</code><span class="sig-paren">(</span><em>parent</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/captslog/ui/centralwidget.html#CentralWidget"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#captslog.ui.centralwidget.CentralWidget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt4.QtGui.QWidget</span></code></p>
+<p>Set up the central GUI.</p>
+<p>The CentralWidget consist of three main widgets including the
+journal list, journal entry, and journal view.</p>
 </dd></dl>
 
 </div>
@@ -191,10 +198,16 @@
 <dt id="captslog.ui.entrywidget.Entry_Widget">
 <em class="property">class </em><code class="descclassname">captslog.ui.entrywidget.</code><code class="descname">Entry_Widget</code><span class="sig-paren">(</span><em>parent</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/captslog/ui/entrywidget.html#Entry_Widget"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#captslog.ui.entrywidget.Entry_Widget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt4.QtGui.QWidget</span></code></p>
+<p>Set up Journal Entry.</p>
+<p>This widget allows users to type in their journal
+to be converted to markdown format.</p>
 <dl class="method">
 <dt id="captslog.ui.entrywidget.Entry_Widget.entry_layout">
 <code class="descname">entry_layout</code><span class="sig-paren">(</span><em>parent</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/captslog/ui/entrywidget.html#Entry_Widget.entry_layout"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#captslog.ui.entrywidget.Entry_Widget.entry_layout" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Add box layout for Journal Entry.</p>
+<p>This function adds a box layout in the middle of the central widget
+and calls __JournalEntry funtion.</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -208,15 +221,36 @@
 <dt id="captslog.ui.mainwindow.Ui_MainWindow">
 <em class="property">class </em><code class="descclassname">captslog.ui.mainwindow.</code><code class="descname">Ui_MainWindow</code><a class="reference internal" href="_modules/captslog/ui/mainwindow.html#Ui_MainWindow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#captslog.ui.mainwindow.Ui_MainWindow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt4.QtGui.QMainWindow</span></code></p>
+<p>MainWindow class</p>
+<p>This is the main class for GUI, it calls initiation from the CentralWidget
+class, which generates the main content of GUI.</p>
 <dl class="method">
 <dt id="captslog.ui.mainwindow.Ui_MainWindow.retranslateUi">
 <code class="descname">retranslateUi</code><span class="sig-paren">(</span><em>MainWindow</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/captslog/ui/mainwindow.html#Ui_MainWindow.retranslateUi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#captslog.ui.mainwindow.Ui_MainWindow.retranslateUi" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Language translation.</p>
+<p>This function exist in case of multi languages are introduce
+to the program.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="captslog.ui.mainwindow.Ui_MainWindow.setupUi">
 <code class="descname">setupUi</code><span class="sig-paren">(</span><em>MainWindow</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/captslog/ui/mainwindow.html#Ui_MainWindow.setupUi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#captslog.ui.mainwindow.Ui_MainWindow.setupUi" title="Permalink to this definition">¶</a></dt>
-<dd><p>Setting up Main window UI.</p>
+<dd><p>Set up the Main Window.</p>
+<p>This function does three main things: set an initial size
+for the window, set up the central widget, and the menu bar.</p>
+<dl class="attribute">
+<dt id="captslog.ui.mainwindow.Ui_MainWindow.sizePolicy">
+<code class="descname">sizePolicy</code><a class="headerlink" href="#captslog.ui.mainwindow.Ui_MainWindow.sizePolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>QSizePolicy</em> &#8211; Window size setting.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="captslog.ui.mainwindow.Ui_MainWindow._layout">
+<code class="descname">_layout</code><a class="headerlink" href="#captslog.ui.mainwindow.Ui_MainWindow._layout" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>QHBoxLayout</em> &#8211; layout for central widget to
+scale along with window.</p>
+</dd></dl>
+
 </dd></dl>
 
 </dd></dl>
@@ -228,10 +262,15 @@
 <dt id="captslog.ui.viewwidget.View_Widget">
 <em class="property">class </em><code class="descclassname">captslog.ui.viewwidget.</code><code class="descname">View_Widget</code><span class="sig-paren">(</span><em>parent</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/captslog/ui/viewwidget.html#View_Widget"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#captslog.ui.viewwidget.View_Widget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt4.QtGui.QWidget</span></code></p>
+<p>Set up Journal View.</p>
+<p>This widget acts as the output for the markdown converted html text.</p>
 <dl class="method">
 <dt id="captslog.ui.viewwidget.View_Widget.view_layout">
 <code class="descname">view_layout</code><span class="sig-paren">(</span><em>parent</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/captslog/ui/viewwidget.html#View_Widget.view_layout"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#captslog.ui.viewwidget.View_Widget.view_layout" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Add box layout for Journal View.</p>
+<p>This function adds a box layout in the right side of the central widget
+and calls __JournalView funtion.</p>
+</dd></dl>
 
 </dd></dl>
 

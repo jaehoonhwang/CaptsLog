@@ -21,7 +21,7 @@ import os
 import sys
 import sphinx_rtd_theme
 # sys.path.insert(0, os.path.abspath('.'))
-# sys.path.insert(0, os.path.abspath('extensions'))
+sys.path.insert(0, os.path.abspath('extensions'))
 # sys.path.insert(0, os.path.abspath('../captslog/'))
 # sys.path.append(os.path.join(os.path.dirname(__name__), '../../captslog/'))
 sys.path.insert(0, os.path.abspath("../../"))
